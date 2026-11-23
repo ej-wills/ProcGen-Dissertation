@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 
 public class DungeonGenerator
@@ -34,6 +35,6 @@ public class DungeonGenerator
         
         
         
-        return new List<Node>(roomList);
+        return new List<Node>(roomList).Concat(corridorList).ToList();
     }
 }
